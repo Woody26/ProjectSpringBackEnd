@@ -4,6 +4,7 @@ package com.example.jurassic_park_back_end.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -26,8 +27,10 @@ public class Paddock {
     @JoinColumn(name="park_id")
     private Park park;
 
-    public Paddock(String type) {
+    public Paddock(String type, Park park) {
         this.type = type;
+        this.dinosaurs = new ArrayList<Dinosaur>();
+        this.park = park;
     }
 
     public Paddock() {

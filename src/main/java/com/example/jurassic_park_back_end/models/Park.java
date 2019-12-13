@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -27,6 +28,7 @@ public class Park {
 
     public Park(String name) {
         this.name = name;
+        this.paddocks = new ArrayList<Paddock>();
     }
 
     public Park() {

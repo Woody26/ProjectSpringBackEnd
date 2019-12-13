@@ -31,12 +31,9 @@ public class DataLoader implements ApplicationRunner {
         Park park = new Park("Isla Nublar");
         parkRepository.save(park);
 
-        Paddock paddock = new Paddock("Carnivore");
+        Paddock paddock = new Paddock("Carnivore", park);
         paddockRepository.save(paddock);
-        parkRepository.save(park);
 
-        park.addPaddock(paddock);
-        parkRepository.save(park);
 
         Dinosaur dinosaur = new Dinosaur("Carnivore", "Velociraptor", paddock);
         dinosaurRepository.save(dinosaur);

@@ -27,11 +27,11 @@ public class Dinosaur {
     @JoinColumn(name="paddock_id")
     private Paddock paddock;
 
-    public Dinosaur(String type, String name) {
+    public Dinosaur(String type, String name, Paddock paddock) {
         this.type = type;
         this.isFed = false;
         this.name = name;
-        this.paddock = null;
+        this.paddock = paddock;
     }
 
     public Dinosaur() {
