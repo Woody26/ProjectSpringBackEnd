@@ -36,6 +36,14 @@ public class Paddock {
     public Paddock() {
     }
 
+    public Park getPark() {
+        return park;
+    }
+
+    public void setPark(Park park) {
+        this.park = park;
+    }
+
     public Long getId() {
         return id;
     }

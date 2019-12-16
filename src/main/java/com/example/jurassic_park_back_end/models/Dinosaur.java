@@ -53,7 +53,7 @@ public class Dinosaur {
         this.type = type;
     }
 
-    public boolean isFed() {
+    public boolean getFed() {
         return isFed;
     }
 
