@@ -31,13 +31,13 @@ public class DataLoader implements ApplicationRunner {
         Park park = new Park("Isla Nublar");
         parkRepository.save(park);
 
-        Paddock paddock1 = new Paddock("Carnivore", park);
+        Paddock paddock1 = new Paddock("Carnivore", park, "Holding Pen");
         paddockRepository.save(paddock1);
 
-        Paddock paddock2 = new Paddock("Herbivore", park);
+        Paddock paddock2 = new Paddock("Herbivore", park, "Herb 1");
         paddockRepository.save(paddock2);
 
-        Paddock paddock3 = new Paddock("Carnivore", park);
+        Paddock paddock3 = new Paddock("Carnivore", park, "Carni 1");
         paddockRepository.save(paddock3);
 
         Dinosaur velociraptor = new Dinosaur("Carnivore", "Velociraptor", paddock1);

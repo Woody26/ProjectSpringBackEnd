@@ -15,6 +15,9 @@ public class Paddock {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "name")
+    private String name;
+
     @Column(name = "type")
     private String type;
 
@@ -27,10 +30,19 @@ public class Paddock {
     @JoinColumn(name="park_id")
     private Park park;
 
-    public Paddock(String type, Park park) {
+    public Paddock(String type, Park park, String name) {
+        this.name = name;
         this.type = type;
         this.dinosaurs = new ArrayList<Dinosaur>();
         this.park = park;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Paddock() {

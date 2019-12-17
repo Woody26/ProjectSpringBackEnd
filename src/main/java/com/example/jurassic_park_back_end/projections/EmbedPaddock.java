@@ -11,6 +11,7 @@ import java.util.List;
 public interface EmbedPaddock {
     Long getId();
     String getType();
+    String getName();
     List<Dinosaur> getDinosaurs();
     Park getPark();
 }
